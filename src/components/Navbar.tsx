@@ -39,14 +39,14 @@ const Navbar: React.FC = () => {
                     <div className="hidden md:flex items-center space-x-6 text-sm">
                         <Link
                             href="/about"
-                            className={`${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors`}
+                            className={`${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors text-base`}
                         >
                             ที่มาและความสำคัญ
                         </Link>
-                        <a href="#" className="text-gray-600 hover:text-gray-900 font-bold transition-colors">สถิติการประเมิน</a>
+                        <a href="#" className="text-gray-600 hover:text-gray-900 font-bold transition-colors text-base">สถิติการประเมิน</a>
                         <Link
                             href="/assessment"
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition-colors"
+                            className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2.5 px-7 rounded-lg shadow-lg transition-colors text-lg"
                         >
                             เริ่มการประเมิน
                         </Link>
@@ -58,14 +58,14 @@ const Navbar: React.FC = () => {
                     <div className="md:hidden mt-4 flex flex-col divide-y divide-gray-200 border-t border-gray-200 text-sm text-center">
                         <Link
                             href="/about"
-                            className={`${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors py-4 block`}
+                            className={`${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors py-4 block text-xl`}
                             onClick={() => setIsOpen(false)}
                         >
                             ที่มาและความสำคัญ
                         </Link>
                         <a
                             href="#"
-                            className="text-gray-600 hover:text-gray-900 font-bold transition-colors py-4 block"
+                            className="text-gray-600 hover:text-gray-900 font-bold transition-colors py-4 block text-xl"
                             onClick={() => setIsOpen(false)}
                         >
                             สถิติการประเมิน
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                         <div className="pt-4 pb-1">
                             <Link
                                 href="/assessment"
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition-colors inline-block"
+                                className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors inline-block text-xl"
                                 onClick={() => setIsOpen(false)}
                             >
                                 เริ่มการประเมิน
