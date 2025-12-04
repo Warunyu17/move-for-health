@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaShieldAlt } from 'react-icons/fa';
 import { AiOutlineAreaChart, AiOutlinePlusCircle } from 'react-icons/ai';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -49,32 +50,34 @@ export default function Home() {
 
                     </div>
 
+
+
                     {/* === ส่วน Feature Cards 3 อันล่าง === */}
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-2 pb-8 lg:pb-0">
 
                         {/* Card 1: การเตรียมความพร้อม */}
-                        <a href="/safety" className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
+                        <Link href="/safety" className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
                             <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300">
                                 <FaShieldAlt className="w-12 h-12 text-gray-600" />
                             </div>
                             <p className="mt-4 text-xl font-bold text-gray-800">การเตรียมความพร้อม</p>
-                        </a>
+                        </Link>
 
                         {/* Card 2: สถิติการประเมิน */}
-                        <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                        <Link href="/statistics" className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
                             <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300">
                                 <AiOutlineAreaChart className="w-12 h-12 text-gray-600" />
                             </div>
                             <p className="mt-4 text-xl font-bold text-gray-800">สถิติการประเมิน</p>
-                        </div>
+                        </Link>
 
                         {/* Card 3: ทำการประเมิน */}
-                        <a href="/assessment" className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
+                        <Link href="/assessment" className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
                             <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300">
                                 <AiOutlinePlusCircle className="w-12 h-12 text-gray-600" />
                             </div>
                             <p className="mt-4 text-xl font-bold text-gray-800">ทำการประเมิน</p>
-                        </a>
+                        </Link>
 
                     </div>
                 </main>

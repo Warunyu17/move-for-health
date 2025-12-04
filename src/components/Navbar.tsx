@@ -43,7 +43,12 @@ const Navbar: React.FC = () => {
                         >
                             ที่มาและความสำคัญ
                         </Link>
-                        <a href="#" className="text-gray-600 hover:text-gray-900 font-bold transition-colors text-base">สถิติการประเมิน</a>
+                        <Link
+                            href="/statistics"
+                            className={`${isActive('/statistics') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors text-base`}
+                        >
+                            สถิติการประเมิน
+                        </Link>
                         <Link
                             href="/assessment"
                             className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2.5 px-7 rounded-lg shadow-lg transition-colors text-lg"
@@ -63,13 +68,13 @@ const Navbar: React.FC = () => {
                         >
                             ที่มาและความสำคัญ
                         </Link>
-                        <a
-                            href="#"
-                            className="text-gray-600 hover:text-gray-900 font-bold transition-colors py-4 block text-xl"
+                        <Link
+                            href="/statistics"
+                            className={`${isActive('/statistics') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'} font-bold transition-colors py-4 block text-xl`}
                             onClick={() => setIsOpen(false)}
                         >
                             สถิติการประเมิน
-                        </a>
+                        </Link>
                         <div className="pt-4 pb-1">
                             <Link
                                 href="/assessment"
