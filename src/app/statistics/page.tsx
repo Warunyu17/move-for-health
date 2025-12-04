@@ -34,7 +34,9 @@ export default function StatisticsPage() {
             const response = await fetch('/api/assessment/stats');
             const data = await response.json();
             if (response.ok) {
-                setStatsData(data.data);
+                // Sort data by count in descending order
+                const sortedData = data.data.sort((a: any, b: any) => b.count - a.count);
+                setStatsData(sortedData);
             }
         } catch (error) {
             console.error("Error fetching stats:", error);
